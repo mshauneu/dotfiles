@@ -1,0 +1,53 @@
+ZSHA_BASE=$HOME/.zsh
+source $ZSHA_BASE/antigen/antigen.zsh
+
+# Ensure languages are set
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+# Ensure editor is set
+export EDITOR=vim
+
+# OS Detection
+UNAME=`uname`
+
+# Fallback info
+CURRENT_OS='Linux'
+if [[ $UNAME == 'Darwin' ]]; then
+  CURRENT_OS='OS X'
+fi
+
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-history-substring-search
+#antigen bundle zsh-users/zsh-completions src
+
+antigen use oh-my-zsh
+
+antigen bundle tmux
+antigen bundle git
+antigen bundle git-prompt
+antigen bundle gitignore
+
+antigen bundle node
+antigen bundle npm
+antigen bundle grunt
+antigen bundle gulp
+antigen bundle bower
+
+antigen bundle mvn
+antigen bundle scala
+antigen bundle sbt
+
+antigen theme jreese
+
+if [[ $CURRENT_OS == 'OS X' ]]; then
+  antigen bundle brew
+  antigen bundle brew-cask
+elif [[ $CURRENT_OS == 'Linux' ]]; then
+  # None so far...
+fi
+
+antigen apply
+
