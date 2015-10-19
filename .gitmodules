@@ -19,3 +19,12 @@
 [submodule "vim/vim-pathogen"]
 	path = vim/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+[submodule "vim-expand-region"]
+	path = vim-expand-region
+	url = https://github.com/terryma/vim-expand-region.git
+[submodule "vim/vim-expand-region"]
+	path = vim/vim-expand-region
+	url = https://github.com/terryma/vim-expand-region.git
+[submodule "vim/bundle/vim-expand-region"]
+	path = vim/bundle/vim-expand-region
+	url = https://github.com/terryma/vim-expand-region.git
