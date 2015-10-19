@@ -1,4 +1,4 @@
-ZSHA_BASE=$HOME/.zsh
+ZSHA_BASE=~/.dotfiles/zsh
 source $ZSHA_BASE/antigen/antigen.zsh
 
 # Ensure languages are set
