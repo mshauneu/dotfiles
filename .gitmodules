@@ -19,3 +19,18 @@
 [submodule "vim/vim-pathogen"]
 	path = vim/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen.git
+[submodule "vim/bundle/neocomplete.vim"]
+	path = vim/bundle/neocomplete.vim
+	url = https://github.com/Shougo/neocomplete.vim.git
+[submodule "vim/bundle/supertab"]
+	path = vim/bundle/supertab
+	url = https://github.com/ervandew/supertab
+[submodule "vim/bundle/neosnippet.vim"]
+	path = vim/bundle/neosnippet.vim
+	url = https://github.com/Shougo/neosnippet.vim.git
+[submodule "vim/bundle/neosnippet-snippets"]
+	path = vim/bundle/neosnippet-snippets
+	url = https://github.com/Shougo/neosnippet-snippets.git
+[submodule "vim/bundle/lightline.vim"]
+	path = vim/bundle/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git
