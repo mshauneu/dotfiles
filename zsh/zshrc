@@ -12,6 +12,11 @@ export EDITOR=vim
 # OS Detection
 UNAME=`uname`
 
+export GOPATH=$HOME/golang
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+
 # Fallback info
 CURRENT_OS='Linux'
 if [[ $UNAME == 'Darwin' ]]; then
@@ -20,7 +25,7 @@ fi
 
 
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-history-substring-search
+#antigen bundle zsh-users/zsh-history-substring-search
 #antigen bundle zsh-users/zsh-completions src
 
 antigen use oh-my-zsh
@@ -29,6 +34,10 @@ antigen bundle tmux
 antigen bundle git
 antigen bundle git-prompt
 antigen bundle gitignore
+
+antigen bundle golang
+antigen bundle history
+antigen bundle autojump
 
 antigen bundle node
 antigen bundle npm
@@ -39,6 +48,9 @@ antigen bundle bower
 antigen bundle mvn
 antigen bundle scala
 antigen bundle sbt
+
+antigen bundle vagrant
+antigen bundle docker
 
 antigen theme jreese
 
@@ -64,3 +76,5 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
+bindkey "^X\x7f" backward-kill-line
+bindkey "^X^_" redo
