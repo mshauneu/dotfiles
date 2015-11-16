@@ -36,6 +36,8 @@ antigen bundle git-prompt
 antigen bundle gitignore
 
 antigen bundle golang
+antigen bundle pip
+
 antigen bundle history
 antigen bundle autojump
 
@@ -51,6 +53,7 @@ antigen bundle sbt
 
 antigen bundle vagrant
 antigen bundle docker
+antigen bundle docker-compose
 
 antigen theme jreese
 
@@ -78,3 +81,4 @@ bindkey '^Z' fancy-ctrl-z
 
 bindkey "^X\x7f" backward-kill-line
 bindkey "^X^_" redo
+export PATH="/usr/local/sbin:$PATH"
