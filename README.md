@@ -2,7 +2,7 @@
 
 ```
 mkdir ~/.dotfiles
-git clone git@github.com:mshauneu/dotfiles.git ~/.dotfiles
+git clone https://github.com/mshauneu/dotfiles.git ~/.dotfiles
 git -C ~/.dotfiles submodule update --init --recursive
 ln -s ~/.dotfiles/vim/vimrc ~/.vimrc
 ln -s ~/.dotfiles/zsh/zshrc ~/.zshrc
