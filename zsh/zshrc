@@ -12,7 +12,8 @@ export EDITOR=vim
 # OS Detection
 UNAME=`uname`
 
-export GOPATH=$HOME/golang
+# Go 
+export GOPATH=$HOME/Projects/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
@@ -55,6 +56,8 @@ antigen bundle vagrant
 antigen bundle docker
 antigen bundle docker-compose
 
+antigen bundle heroku
+
 antigen theme jreese
 
 if [[ $CURRENT_OS == 'OS X' ]]; then
@@ -81,4 +84,5 @@ bindkey '^Z' fancy-ctrl-z
 
 bindkey "^X\x7f" backward-kill-line
 bindkey "^X^_" redo
+
 export PATH="/usr/local/sbin:$PATH"

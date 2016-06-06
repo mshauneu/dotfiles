@@ -53,6 +53,8 @@ set list listchars=tab:\ \ ,trail:·
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
 
+command Paste execute 'set noai | insert | set ai'
+
 " ================ Tagbar ===========================
 
 nmap <F8> :TagbarToggle<CR>
