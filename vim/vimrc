@@ -23,8 +23,15 @@ set wildmenu
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
-"turn on syntax highlighting
+" turn on syntax highlighting
 syntax on
+
+nnoremap <C-a> <Home>
+nnoremap <C-e> <End>
+inoremap <C-a> <C-o><Home>
+inoremap <C-e> <C-o><End>
+inoremap <M-f> <C-o><S-Right>
+inoremap <M-b> <C-o><S-Left>
 
 " ================= Status Line =====================
 set laststatus=2
@@ -57,7 +64,7 @@ command Paste execute 'set noai | insert | set ai'
 
 " ================ Tagbar ===========================
 
-nmap <F8> :TagbarToggle<CR>
+map <F8> :TagbarToggle<CR>
 " open a Tagbar automatically when vim starts up
 " autocmd vimenter * Tagbar
 
