@@ -28,10 +28,16 @@ syntax on
 
 nnoremap <C-a> <Home>
 nnoremap <C-e> <End>
+nnoremap <M-f> <w>
+nnoremap <M-b> <b>
 inoremap <C-a> <C-o><Home>
 inoremap <C-e> <C-o><End>
-inoremap <M-f> <C-o><S-Right>
-inoremap <M-b> <C-o><S-Left>
+"inoremap <M-f> <C-o><w>
+"inoremap <M-b> <C-o><b>
+
+inoremap <M-f> <ESC><Space>Wi
+inoremap <M-b> <Esc>Bi
+inoremap <M-d> <ESC>cW
 
 " ================= Status Line =====================
 set laststatus=2
@@ -69,16 +75,16 @@ map <F8> :TagbarToggle<CR>
 " autocmd vimenter * Tagbar
 
 " ================ Nerd Tree ===========================
-
-map <F9> :NERDTreeToggle<CR>
-
-" open a NERDTree automatically when vim starts up if no files were specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"
+"map <F9> :NERDTreeToggle<CR>
+"
+"" open a NERDTree automatically when vim starts up if no files were specified
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " close vim if the only window left open is a NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
-let g:nerdtree_tabs_open_on_console_startup=1
+"let g:nerdtree_tabs_open_on_console_startup=1
 
 " ================ Neo Complete ===================================
 
