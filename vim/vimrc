@@ -26,19 +26,6 @@ set hidden
 " turn on syntax highlighting
 syntax on
 
-nnoremap <C-a> <Home>
-nnoremap <C-e> <End>
-nnoremap <M-f> <w>
-nnoremap <M-b> <b>
-inoremap <C-a> <C-o><Home>
-inoremap <C-e> <C-o><End>
-"inoremap <M-f> <C-o><w>
-"inoremap <M-b> <C-o><b>
-
-inoremap <M-f> <ESC><Space>Wi
-inoremap <M-b> <Esc>Bi
-inoremap <M-d> <ESC>cW
-
 " ================= Status Line =====================
 set laststatus=2
 
