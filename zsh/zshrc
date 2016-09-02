@@ -12,12 +12,6 @@ export EDITOR=vim
 # OS Detection
 UNAME=`uname`
 
-# Go 
-export GOPATH=$HOME/Projects/go
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
-
 # Fallback info
 CURRENT_OS='Linux'
 if [[ $UNAME == 'Darwin' ]]; then
@@ -51,6 +45,7 @@ antigen bundle bower
 antigen bundle mvn
 antigen bundle scala
 antigen bundle sbt
+antigen bundle gradle
 
 antigen bundle vagrant
 antigen bundle docker
