@@ -14,6 +14,8 @@ set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
+set hlsearch                    "Highlight all occurrence of a selected word
+set autoread                    "Monitor realtime changes to a file
 
 set wildmode=longest,list,full
 set wildmenu
