@@ -37,7 +37,6 @@ set nobackup
 set nowb
 
 " ================ Indentation ======================
-
 set autoindent
 set smartindent
 set smarttab
@@ -78,6 +77,7 @@ let g:lightline = {
   \ }
 
 " ================= Auto Paste =========================
+function! WrapForTmux(s)  
   if !exists('$TMUX')
     return a:s
   endif
