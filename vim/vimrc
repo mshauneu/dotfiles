@@ -15,10 +15,10 @@ set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 set hlsearch                    "Highlight all occurrence of a selected word
-set autoread                    "Monitor realtime changes to a file
 
 set wildmode=longest,list,full
 set wildmenu
+set incsearch
 
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
@@ -27,6 +27,14 @@ set hidden
 
 " turn on syntax highlighting
 syntax on
+
+" let loaded_netrwPlugin = 1
+let g:netrw_banner = 0
+
+let g:SuperTabDefaultCompletionType = "context"
+
+" ================= Ag Line =====================
+set runtimepath^=~/.dotfiles/vim/bundle/ag.vim
 
 " ================= Status Line =====================
 set laststatus=2
