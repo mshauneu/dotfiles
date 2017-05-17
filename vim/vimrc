@@ -64,6 +64,12 @@ set linebreak    "Wrap lines at convenient points
 
 command Paste execute 'set noai | insert | set ai'
 
+if &diff
+    "set cursorline
+    map ] ]c
+    map [ [c
+endif
+
 " ================ Tagbar ===========================
 
 map <F8> :TagbarToggle<CR>
