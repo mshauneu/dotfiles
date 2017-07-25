@@ -226,7 +226,7 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 139 606 456 0 0 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>269 109 796 473 0 0 1440 877 </string>
+	<string>252 324 937 465 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>0 13 1438 864 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -1117,7 +1117,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-04-20T12:40:51Z</date>
+	<date>2017-05-22T17:49:10Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
@@ -1144,7 +1144,6 @@
 	<integer>10</integer>
 	<key>ToolbeltTools</key>
 	<array>
-		<string>Command History</string>
 		<string>Jobs</string>
 	</array>
 	<key>TripleClickSelectsFullWrappedLines</key>
