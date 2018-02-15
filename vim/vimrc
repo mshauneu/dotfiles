@@ -19,6 +19,7 @@ set hlsearch                    "Highlight all occurrence of a selected word
 set wildmode=longest,list,full
 set wildmenu
 set incsearch
+set smartcase
 
 let mapleader=","
 
