@@ -20,6 +20,8 @@ set wildmode=longest,list,full
 set wildmenu
 set incsearch
 
+let mapleader=","
+
 " This makes vim act like all other editors, buffers can
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
@@ -38,6 +40,19 @@ set runtimepath^=~/.dotfiles/vim/bundle/ag.vim
 
 " ================= Status Line =====================
 set laststatus=2
+
+" ================= Bufer Line =====================
+nmap <leader>1 <Plug>BufTabLine.Go(1)
+nmap <leader>2 <Plug>BufTabLine.Go(2)
+nmap <leader>3 <Plug>BufTabLine.Go(3)
+nmap <leader>4 <Plug>BufTabLine.Go(4)
+nmap <leader>5 <Plug>BufTabLine.Go(5)
+nmap <leader>6 <Plug>BufTabLine.Go(6)
+nmap <leader>7 <Plug>BufTabLine.Go(7)
+nmap <leader>8 <Plug>BufTabLine.Go(8)
+nmap <leader>9 <Plug>BufTabLine.Go(9)
+nmap <leader>0 <Plug>BufTabLine.Go(10)
+nmap <leader>w :bw<CR>
 
 " ================ Turn Off Swap Files ==============
 set noswapfile
@@ -76,11 +91,11 @@ map <F8> :TagbarToggle<CR>
 " open a Tagbar automatically when vim starts up
 " autocmd vimenter * Tagbar
 
-" ================= Buffer Line =========================
+" ================= Status Line =========================
 let g:lightline = {
   \ 'colorscheme': 'wombat',
   \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ], [ 'filename' ], [ 'bufferline' ] ],
+  \   'left': [ [ 'mode', 'paste' ], [ 'filename' ]  ],
   \ }
   \ }
 
