@@ -81,6 +81,7 @@ bindkey "^X\x7f" backward-kill-line
 bindkey "^X^_" redo
 
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/Users/mshauneu/Bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/local/opt/node@8/bin:$PATH"
