@@ -86,9 +86,4 @@ export PATH="/Users/mshauneu/Bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/local/opt/node@8/bin:$PATH"
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/mshauneu/Projects/oath/cmp-campaigns-mailer/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/mshauneu/Projects/oath/cmp-campaigns-mailer/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/mshauneu/Projects/oath/cmp-campaigns-mailer/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/mshauneu/Projects/oath/cmp-campaigns-mailer/node_modules/tabtab/.completions/sls.zsh
+SSH_AUTH_SOCK=/Users/mshauneu/.yubiagent/sock
