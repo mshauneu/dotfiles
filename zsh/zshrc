@@ -87,3 +87,12 @@ export PATH="/Users/mshauneu/Bin:$PATH"
 export PATH="/usr/local/opt/node@8/bin:$PATH"
 
 SSH_AUTH_SOCK=/Users/mshauneu/.yubiagent/sock
+#alias load_key="ssh-add -s /usr/local/lib/opensc-pkcs11.so"
+#alias unload_key="ssh-add -e /usr/local/lib/opensc-pkcs11.so"
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/mshauneu/Projects/oath/ces-report/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/mshauneu/Projects/oath/ces-report/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/mshauneu/Projects/oath/ces-report/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/mshauneu/Projects/oath/ces-report/node_modules/tabtab/.completions/sls.zsh
