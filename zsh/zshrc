@@ -96,3 +96,6 @@ SSH_AUTH_SOCK=/Users/mshauneu/.yubiagent/sock
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /Users/mshauneu/Projects/oath/ces-report/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/mshauneu/Projects/oath/ces-report/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/mshauneu/Projects/oath/cbs/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/mshauneu/Projects/oath/cbs/node_modules/tabtab/.completions/slss.zsh
