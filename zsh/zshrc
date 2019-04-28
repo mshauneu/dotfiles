@@ -38,9 +38,6 @@ antigen bundle autojump
 
 antigen bundle node
 antigen bundle npm
-antigen bundle grunt
-antigen bundle gulp
-antigen bundle bower
 
 antigen bundle mvn
 antigen bundle scala
@@ -50,7 +47,8 @@ antigen bundle gradle
 antigen bundle vagrant
 antigen bundle docker
 antigen bundle docker-compose
-
+antigen bundle kubectl
+antigen bundle terraform
 antigen bundle heroku
 
 antigen theme jreese
