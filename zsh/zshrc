@@ -18,10 +18,9 @@ if [[ $UNAME == 'Darwin' ]]; then
   CURRENT_OS='OS X'
 fi
 
-
-#antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-syntax-highlighting
 #antigen bundle zsh-users/zsh-history-substring-search
-#antigen bundle zsh-users/zsh-completions src
+antigen bundle zsh-users/zsh-completions src
 
 antigen use oh-my-zsh
 
@@ -88,12 +87,3 @@ SSH_AUTH_SOCK=/Users/mshauneu/.yubiagent/sock
 #alias load_key="ssh-add -s /usr/local/lib/opensc-pkcs11.so"
 #alias unload_key="ssh-add -e /usr/local/lib/opensc-pkcs11.so"
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/mshauneu/Projects/oath/ces-report/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/mshauneu/Projects/oath/ces-report/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/mshauneu/Projects/oath/ces-report/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/mshauneu/Projects/oath/ces-report/node_modules/tabtab/.completions/sls.zsh
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /Users/mshauneu/Projects/oath/cbs/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/mshauneu/Projects/oath/cbs/node_modules/tabtab/.completions/slss.zsh
