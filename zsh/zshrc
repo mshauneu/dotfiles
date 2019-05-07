@@ -77,6 +77,12 @@ bindkey '^Z' fancy-ctrl-z
 bindkey "^X\x7f" backward-kill-line
 bindkey "^X^_" redo
 
+mdcd () {
+  mkdir -p -- "$1" &&
+    cd -P -- "$1"
+}
+export mdcd
+
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/Users/mshauneu/Bin:$PATH"
 
@@ -86,4 +92,3 @@ export PATH="/usr/local/opt/node@8/bin:$PATH"
 SSH_AUTH_SOCK=/Users/mshauneu/.yubiagent/sock
 #alias load_key="ssh-add -s /usr/local/lib/opensc-pkcs11.so"
 #alias unload_key="ssh-add -e /usr/local/lib/opensc-pkcs11.so"
-
