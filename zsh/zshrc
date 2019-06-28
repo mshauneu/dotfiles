@@ -84,11 +84,12 @@ mdcd () {
 export mdcd
 
 export PATH="/usr/local/sbin:$PATH"
-export PATH="/Users/mshauneu/Bin:$PATH"
+export PATH="~/Bin:$PATH"
+export PATH="~/go/bin:$PATH"
+export PATH="/usr/local/opt/node@10/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="/usr/local/opt/node@8/bin:$PATH"
 
-SSH_AUTH_SOCK=/Users/mshauneu/.yubiagent/sock
+SSH_AUTH_SOCK=~/.yubiagent/sock
 #alias load_key="ssh-add -s /usr/local/lib/opensc-pkcs11.so"
 #alias unload_key="ssh-add -e /usr/local/lib/opensc-pkcs11.so"
