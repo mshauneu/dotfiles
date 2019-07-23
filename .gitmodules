@@ -53,3 +53,6 @@
 	path = vim/bundle/vim-commentary
 	url = https://github.com/tpope/vim-commentary
 	
+[submodule "vim/bundle/dart"]
+	path = vim/bundle/dart
+	url = https://github.com/dart-lang/dart-vim-plugin
