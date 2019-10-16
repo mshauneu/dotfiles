@@ -26,6 +26,8 @@
 	<false/>
 	<key>AutoHideTmuxClientSession</key>
 	<false/>
+	<key>BootstrapDaemon</key>
+	<false/>
 	<key>CheckTestRelease</key>
 	<false/>
 	<key>ClosingHotkeySwitchesSpaces</key>
@@ -239,7 +241,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>306 253 918 514 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 172 1440 705 0 0 1440 877 </string>
+	<string>0 0 1440 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>212 101 570 475 0 0 1680 1027 </string>
 	<key>NeverWarnAboutShortLivedSessions_EABAF552-8710-4E51-A635-5B4968A89982</key>
@@ -1025,8 +1027,13 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
+		<string>3.3.6</string>
+		<string>3.3.1</string>
+		<string>3.3.3</string>
+		<string>3.3.5</string>
 		<string>3.2.9</string>
 		<string>3.3.0</string>
+		<string>3.3.4</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
@@ -1037,6 +1044,8 @@
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
+	<key>NoSyncHaveUsedCopyMode</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
 	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
@@ -1046,7 +1055,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>563297157.39323604</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>2</integer>
+	<integer>12</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1399,6 +1408,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>currentTab.currentSession.termid</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>currentTab.currentSession.terminalWindowName</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -1479,6 +1496,14 @@
 				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
+				<string>number</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
 				<string>currentTab.currentSession.hostname</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
@@ -1544,9 +1569,25 @@
 			</dict>
 			<dict>
 				<key>isTerminal</key>
+				<false/>
+				<key>name</key>
+				<string>title</string>
+				<key>nonterminalContext</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
 				<true/>
 				<key>name</key>
 				<string>tmuxWindowTitle</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>title</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -1739,6 +1780,10 @@
 			</dict>
 		</array>
 	</dict>
+	<key>NoSyncSearchHistory</key>
+	<array>
+		<string>docke</string>
+	</array>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>562280082.82100797</real>
 	<key>NoSyncTipsDisabled</key>
@@ -1752,6 +1797,24 @@
 		<string>0003</string>
 		<string>0004</string>
 	</array>
+	<key>NoSyncToolbeltProportions</key>
+	<dict>
+		<key>proportions</key>
+		<array>
+			<dict>
+				<key>heightAsFraction</key>
+				<real>0.5</real>
+				<key>name</key>
+				<string>Jobs</string>
+			</dict>
+			<dict>
+				<key>heightAsFraction</key>
+				<real>0.5</real>
+				<key>name</key>
+				<string>Command History</string>
+			</dict>
+		</array>
+	</dict>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1824,8 +1887,10 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-08-01T16:18:55Z</date>
+	<date>2019-10-16T17:16:35Z</date>
 	<key>SUSendProfileInfo</key>
+	<false/>
+	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SavePasteHistory</key>
 	<false/>
@@ -1888,6 +1953,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.3.0</string>
+	<string>3.3.6</string>
 </dict>
 </plist>
