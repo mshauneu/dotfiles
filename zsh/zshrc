@@ -86,7 +86,7 @@ export mdcd
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/Users/mshauneu/Bin:$PATH"
 export PATH="/Users/mshauneu/go/bin:$PATH"
-export PATH="/usr/local/opt/node@10/bin:$PATH"
+export PATH="/usr/local/opt/node@12/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -95,5 +95,9 @@ SSH_AUTH_SOCK=~/.yubiagent/sock
 alias t="trans -t ru"
 alias tp="trans -t ru -speak"
 
-hash -d w=~/Projects/oath
-hash -d m=~/Projects/my
+hash -d wp=~/Projects/oath
+hash -d mp=~/Projects/my
+hash -d tp=~/Projects/tmp
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
