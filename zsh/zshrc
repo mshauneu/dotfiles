@@ -101,3 +101,5 @@ hash -d tp=~/Projects/tmp
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+
+[ -s "/Users/mshauneu/.jabba/jabba.sh" ] && source "/Users/mshauneu/.jabba/jabba.sh"
