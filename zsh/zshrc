@@ -1,42 +1,39 @@
 ZSHA_BASE=~/.dotfiles/zsh
 source $ZSHA_BASE/antigen/antigen.zsh
 
-# Ensure languages are set
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-# Ensure editor is set
 export EDITOR=vim
 
-# OS Detection
 UNAME=`uname`
 
-# Fallback info
-CURRENT_OS='Linux'
 if [[ $UNAME == 'Darwin' ]]; then
-  CURRENT_OS='OS X'
+  antigen bundle brew
+  antigen bundle brew-cask
 fi
-
-antigen bundle zsh-users/zsh-syntax-highlighting
-#antigen bundle zsh-users/zsh-history-substring-search
-antigen bundle zsh-users/zsh-completions src
 
 antigen use oh-my-zsh
 
+antigen bundle zsh-users/zsh-completions src
+
 antigen bundle tmux
+antigen bundle vim
+antigen bundle fancy-ctrl-z
+
 antigen bundle git
 antigen bundle git-prompt
 antigen bundle gitignore
-
-antigen bundle golang
-antigen bundle pip
 
 antigen bundle history
 antigen bundle autojump
 
 antigen bundle node
 antigen bundle npm
+
+antigen bundle golang
+antigen bundle pip
 
 antigen bundle mvn
 antigen bundle scala
@@ -48,49 +45,36 @@ antigen bundle docker
 antigen bundle docker-compose
 antigen bundle kubectl
 antigen bundle terraform
-antigen bundle heroku
 
-antigen theme jreese
+export FZF_BASE=/usr/local/opt/fzf/
+antigen bundle fzf
 
-if [[ $CURRENT_OS == 'OS X' ]]; then
-  antigen bundle brew
-  antigen bundle brew-cask
-elif [[ $CURRENT_OS == 'Linux' ]]; then
-  # None so far...
-fi
+export NVM_LAZY_LOAD=true
+export NVM_AUTO_USE=true
+antigen bundle lukechilds/zsh-nvm
+
+antigen theme philips
+#antigen theme jreese
+#antigen theme frisk
 
 antigen apply
 
-# Use Ctrl-Z to switch back to Vim
-fancy-ctrl-z () {
-  if [[ $#BUFFER -eq 0 ]]; then
-    BUFFER="fg"
-    zle accept-line
-  else
-    zle push-input
-    zle clear-screen
-  fi
-}
-zle -N fancy-ctrl-z
-bindkey '^Z' fancy-ctrl-z
-
-bindkey "^X\x7f" backward-kill-line
-bindkey "^X^_" redo
 
 mdcd () {
-  mkdir -p -- "$1" &&
-    cd -P -- "$1"
+  mkdir -p -- "$1" && cd -P -- "$1"
 }
 export mdcd
+
+export RPROMPT=
+
+export AWS_PROFILE=federate
+export AWS_DEFAULT_REGION=us-east-1
+
+export SSH_AUTH_SOCK=~/.yubiagent/sock
 
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/Users/mshauneu/Bin:$PATH"
 export PATH="/Users/mshauneu/go/bin:$PATH"
-export PATH="/usr/local/opt/node@12/bin:$PATH"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-SSH_AUTH_SOCK=~/.yubiagent/sock
 
 alias t="trans -t ru"
 alias tp="trans -t ru -speak"
@@ -98,8 +82,5 @@ alias tp="trans -t ru -speak"
 hash -d wp=~/Projects/oath
 hash -d mp=~/Projects/my
 hash -d tp=~/Projects/tmp
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
 
 [ -s "/Users/mshauneu/.jabba/jabba.sh" ] && source "/Users/mshauneu/.jabba/jabba.sh"
