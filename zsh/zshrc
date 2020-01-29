@@ -65,7 +65,7 @@ mdcd () {
 }
 export mdcd
 
-export RPROMPT=
+export RPROMPT=''
 
 export AWS_PROFILE=federate
 export AWS_DEFAULT_REGION=us-east-1
