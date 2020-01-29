@@ -26,7 +26,7 @@ antigen bundle git
 antigen bundle git-prompt
 antigen bundle gitignore
 
-antigen bundle history
+# antigen bundle history
 antigen bundle autojump
 
 antigen bundle node
@@ -54,8 +54,8 @@ export NVM_AUTO_USE=true
 antigen bundle lukechilds/zsh-nvm
 
 antigen theme philips
-#antigen theme jreese
-#antigen theme frisk
+# antigen theme jreese
+# antigen theme frisk
 
 antigen apply
 
