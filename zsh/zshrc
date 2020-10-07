@@ -86,3 +86,4 @@ hash -d tp=~/Projects/tmp
 [ -s "/Users/mshauneu/.jabba/jabba.sh" ] && source "/Users/mshauneu/.jabba/jabba.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias lg='lazygit'
