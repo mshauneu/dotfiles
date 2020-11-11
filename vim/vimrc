@@ -1,7 +1,3 @@
-set runtimepath+=~/.dotfiles/vim,~/.dotfiles/vim/vim-pathogen
-call pathogen#infect()
-call pathogen#helptags()
-
 set nocompatible
 
 " ================ General Config ====================
@@ -48,33 +44,11 @@ let mapleader=","
 " exist in the background without being in a window.
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
-
 " turn on syntax highlighting
 syntax on
-
 " let loaded_netrwPlugin = 1
 let g:netrw_banner = 0
-
 " let g:SuperTabDefaultCompletionType = "context"
-
-" ================= Ag Line =====================
-set runtimepath^=~/.dotfiles/vim/bundle/ag.vim
-
-" ================= Status Line =====================
-set laststatus=2
-
-" ================= Bufer Line =====================
-nmap <leader>1 <Plug>BufTabLine.Go(1)
-nmap <leader>2 <Plug>BufTabLine.Go(2)
-nmap <leader>3 <Plug>BufTabLine.Go(3)
-nmap <leader>4 <Plug>BufTabLine.Go(4)
-nmap <leader>5 <Plug>BufTabLine.Go(5)
-nmap <leader>6 <Plug>BufTabLine.Go(6)
-nmap <leader>7 <Plug>BufTabLine.Go(7)
-nmap <leader>8 <Plug>BufTabLine.Go(8)
-nmap <leader>9 <Plug>BufTabLine.Go(9)
-nmap <leader>0 <Plug>BufTabLine.Go(10)
-nmap <leader>w :bw<CR>
 
 " ================ Turn Off Swap Files ==============
 set noswapfile
@@ -89,112 +63,81 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
-
 filetype plugin on
 filetype indent on
 
 " Display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
-
 set nowrap       "Don't wrap lines
 set linebreak    "Wrap lines at convenient points
-
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
-
 command Paste execute 'set noai | insert | set ai'
-
 if &diff
     "set cursorline
     map ] ]c
     map [ [c
 endif
 
-" ================ Tagbar ===========================
-
-map <F8> :TagbarToggle<CR>
-" open a Tagbar automatically when vim starts up
-" autocmd vimenter * Tagbar
-
-" ================= Status Line =========================
-let g:lightline = {
-  \ 'colorscheme': 'wombat',
-  \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ], [ 'filename' ]  ],
-  \ }
-  \ }
-
 " ================= Auto Paste =========================
-function! WrapForTmux(s)  
+function! WrapForTmux(s)
   if !exists('$TMUX')
     return a:s
   endif
-
   let tmux_start = "\<Esc>Ptmux;"
   let tmux_end = "\<Esc>\\"
-
   return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
 endfunction
-
 function! XTermPasteBegin()
   set pastetoggle=<Esc>[201~
   set paste
   return ""
 endfunction
-
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
-" vim-go
+" ================= Ctrlp ==========================
+set runtimepath^=~/.dotfiles/vim/pack/plugins/start/vim-ctrlp
+
+" ================= Status Line =====================
+set laststatus=2
+
+" ================= Vim GO =========================
 let g:go_fmt_command = "goimports"
 let g:go_autodetect_gopath = 1
 let g:go_list_type = "quickfix"
-
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_generate_tags = 1
-
 " Open :GoDeclsDir with ctrl-g
 nmap <C-g> :GoDeclsDir<cr>
 imap <C-g> <esc>:<C-u>GoDeclsDir<cr>
 
-
 augroup go
   autocmd!
-
   let g:go_version_warning = 0
-
   " Show by default 4 spaces for a tab
   autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
-
   " :GoBuild and :GoTestCompile
   autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
-
   " :GoTest
   autocmd FileType go nmap <leader>t  <Plug>(go-test)
-
   " :GoRun
   autocmd FileType go nmap <leader>r  <Plug>(go-run)
-
   " :GoDoc
   autocmd FileType go nmap <Leader>d <Plug>(go-doc)
-
   " :GoCoverageToggle
   autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
-
   " :GoInfo
   autocmd FileType go nmap <Leader>i <Plug>(go-info)
-
   " :GoMetaLinter
   autocmd FileType go nmap <Leader>l <Plug>(go-metalinter)
-
   " :GoDef but opens in a vertical split
   autocmd FileType go nmap <Leader>v <Plug>(go-def-vertical)
   " :GoDef but opens in a horizontal split
   autocmd FileType go nmap <Leader>s <Plug>(go-def-split)
-
   " :GoAlternate  commands :A, :AV, :AS and :AT
   autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
   autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
@@ -212,11 +155,3 @@ function! s:build_go_files()
     call go#cmd#Build(0)
   endif
 endfunction
-
-
-set completeopt+=menuone
-set completeopt+=noselect
-set completeopt+=noinsert
-set shortmess+=c   " Shut off completion messages
-set belloff+=ctrlg " If Vim beeps during completion
-let g:mucomplete#enable_auto_at_startup = 1
