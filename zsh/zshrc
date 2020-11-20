@@ -79,7 +79,7 @@ export PATH="/Users/mshauneu/go/bin:$PATH"
 alias t="trans -t ru"
 alias tp="trans -t ru -speak"
 
-hash -d wp=~/Projects/oath
+hash -d wp=~/Projects/vm/tnv
 hash -d mp=~/Projects/my
 hash -d tp=~/Projects/tmp
 
