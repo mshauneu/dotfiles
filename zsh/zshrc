@@ -6,12 +6,13 @@ export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 export EDITOR=vim
+export BAT_THEME=GitHub
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
 UNAME=`uname`
 
 if [[ $UNAME == 'Darwin' ]]; then
   antigen bundle brew
-  antigen bundle brew-cask
 fi
 
 antigen use oh-my-zsh
@@ -31,6 +32,7 @@ antigen bundle autojump
 
 antigen bundle node
 antigen bundle npm
+antigen bundle yarn
 
 antigen bundle golang
 antigen bundle pip
@@ -46,6 +48,8 @@ antigen bundle docker-compose
 antigen bundle kubectl
 antigen bundle terraform
 
+# antigen bundle ytools
+
 export FZF_BASE=/usr/local/opt/fzf/
 antigen bundle fzf
 
@@ -54,21 +58,22 @@ export NVM_AUTO_USE=true
 antigen bundle lukechilds/zsh-nvm
 
 antigen theme philips
-# antigen theme jreese
-# antigen theme frisk
 
 antigen apply
-
 
 mdcd () {
   mkdir -p -- "$1" && cd -P -- "$1"
 }
 export mdcd
+clone () {
+  git clone "$1" && cd "$(basename "$1" .git)"
+}
+export clone
 
 export RPROMPT=''
 
 export AWS_PROFILE=federate
-export AWS_DEFAULT_REGION=us-east-1
+export AWS_DEFAULT_REGION=us-east-2
 
 export SSH_AUTH_SOCK=~/.yubiagent/sock
 
@@ -78,11 +83,23 @@ export PATH="/Users/mshauneu/go/bin:$PATH"
 
 alias t="trans -t ru"
 alias tp="trans -t ru -speak"
+alias cat="bat -p"
 
-hash -d wp=~/Projects/vm/tnv
+#source <(kubectl completion zsh)
+#alias kubectl="kubecolor --light-background"
+#compdef kubecolor=kubectl
+
+hash -d d=~/Downloads
+hash -d m=~/Music
+hash -d p=~/Projects
 hash -d mp=~/Projects/my
 hash -d tp=~/Projects/tmp
+hash -d wp=~/Projects/vm/tnv
+
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export PATH="/Users/mshauneu/Opt/git-fuzzy/bin:$PATH"
 
 [ -s "/Users/mshauneu/.jabba/jabba.sh" ] && source "/Users/mshauneu/.jabba/jabba.sh"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+jabba use adopt@1.8.0-252
